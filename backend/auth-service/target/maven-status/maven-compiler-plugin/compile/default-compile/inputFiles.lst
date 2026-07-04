@@ -1,0 +1,16 @@
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\model\User.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\security\JwtAuthenticationFilter.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\dto\LoginRequest.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\dto\ResetRequest.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\model\Role.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\config\DatabaseSeeder.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\dto\RegisterRequest.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\AuthServiceApplication.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\dto\OtpRequest.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\repository\UserRepository.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\service\AuthService.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\config\RedisConfig.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\config\SecurityConfig.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\security\JwtTokenProvider.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\controller\AuthController.java
+C:\Users\ziya3\Desktop\CODTECH IT SOLUTIONS\hiresense-ai\backend\auth-service\src\main\java\com\hiresense\auth\dto\AuthResponse.java

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  .brand-font {
+    font-family: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    font-weight: 700 !important;
+  }
+  
+  :root {
+    --background: 213 54% 11%;  /* Deep Navy #0D1B2A */
+    --foreground: 60 9% 88%;    /* Platinum #E0E1DD */
+    --card: 213 38% 18%;        /* Dark Navy Surface #1B263B */
+    --card-foreground: 60 9% 88%;
+    --popover: 213 38% 18%;
+    --popover-foreground: 60 9% 88%;
+    --primary: 42 27% 63%;      /* Muted Sage #B3AF8F */
+    --primary-foreground: 213 54% 11%;
+    --secondary: 213 29% 27%;   /* Steel Blue #415A77 */
+    --secondary-foreground: 60 9% 88%;
+    --muted: 213 38% 18%;
+    --muted-foreground: 213 20% 60%;
+    --accent: 213 29% 27%;
+    --accent-foreground: 60 9% 88%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 213 29% 27%;
+    --input: 213 38% 18%;
+    --ring: 42 27% 63%;
+    --radius: 0.75rem;
+  }
+}
+
+body {
+  background-color: #0D1B2A; /* Deep Navy — dark background */
+  color: #E0E1DD;            /* Platinum — light text */
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Card & Panel Classes */
+.glass-panel {
+  background: #E0E1DD; /* Cream surface on dark bg */
+  border: 1px solid #415A77; /* Steel Blue border */
+  color: #0D1B2A; /* Dark text inside cream panels */
+}
+
+.glass-card {
+  background: #E0E1DD; /* Cream surface on dark bg */
+  border: 1px solid #415A77; /* Steel Blue border */
+  transition: all 0.3s ease;
+  color: #0D1B2A; /* Dark text inside cream cards */
+}
+
+.glass-card:hover {
+  border-color: #B3AF8F; /* Sage highlight on hover */
+  box-shadow: 0 4px 24px rgba(65, 90, 119, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1B2A; /* Dark navy track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B263B; /* Dusty Purple scrollbar */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #415A77; /* Muted Rose scrollbar hover */
+}
+
+/* Code Playground Styles */
+.code-editor {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Custom keyframes */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(65, 90, 119, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(65, 90, 119, 0.4);
+  }
+}
+
+.glow-btn {
+  animation: pulse-glow 3s infinite;
+}

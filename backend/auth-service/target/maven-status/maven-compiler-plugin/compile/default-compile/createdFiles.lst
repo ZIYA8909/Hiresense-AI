@@ -1,0 +1,17 @@
+com\hiresense\auth\AuthServiceApplication.class
+com\hiresense\auth\model\User.class
+com\hiresense\auth\dto\AuthResponse$AuthResponseBuilder.class
+com\hiresense\auth\dto\ResetRequest.class
+com\hiresense\auth\config\RedisConfig.class
+com\hiresense\auth\controller\AuthController.class
+com\hiresense\auth\dto\RegisterRequest.class
+com\hiresense\auth\repository\UserRepository.class
+com\hiresense\auth\model\User$UserBuilder.class
+com\hiresense\auth\model\Role.class
+com\hiresense\auth\service\AuthService.class
+com\hiresense\auth\dto\LoginRequest.class
+com\hiresense\auth\security\JwtAuthenticationFilter.class
+com\hiresense\auth\security\JwtTokenProvider.class
+com\hiresense\auth\dto\AuthResponse.class
+com\hiresense\auth\config\SecurityConfig.class
+com\hiresense\auth\dto\OtpRequest.class
