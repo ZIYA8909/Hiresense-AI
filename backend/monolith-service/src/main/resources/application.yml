@@ -1,0 +1,59 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: hiresense-monolith
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:hiresense_db}
+    username: ${DB_USER:hiresense}
+    password: ${DB_PASSWORD:password123}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+
+app:
+  jwt:
+    secret: dGhpcy1pcy1hLXN1cGVyLXNlY3JldC1kZXYta2V5LWZvci1oaXJlc2Vuc2UtYWktcGxhdGZvcm0tYmFja2VuZC1zZXJ2aWNl
+    expiration-ms: 3600000 # 1 hour
+    refresh-expiration-ms: 604800000 # 7 days
+  ai:
+    gemini-api-key: ${GEMINI_API_KEY:}
+
+aws:
+  s3:
+    region: ${AWS_REGION:us-east-1}
+    access-key: ${AWS_ACCESS_KEY:mock-access-key}
+    secret-key: ${AWS_SECRET_KEY:mock-secret-key}
+    bucket-name: ${AWS_BUCKET_NAME:hiresense-resumes}
+    public-url-prefix: https://${AWS_BUCKET_NAME:hiresense-resumes}.s3.amazonaws.com/
+    endpoint-url: ${AWS_ENDPOINT_URL:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true

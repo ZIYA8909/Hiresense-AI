@@ -4,9 +4,12 @@ import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.command.CreateContainerResponse;
 import com.github.dockerjava.api.model.HostConfig;
 import com.github.dockerjava.core.DefaultDockerClientConfig;
-import com.github.dockerjava.core.DockerClientBuilder;
 import com.github.dockerjava.core.DockerClientConfig;
+import com.github.dockerjava.core.DockerClientImpl;
+import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
+import com.github.dockerjava.transport.DockerHttpClient;
 import org.springframework.stereotype.Service;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -20,8 +23,15 @@ public class DockerSandboxService {
     public DockerSandboxService() {
         try {
             DockerClientConfig config = DefaultDockerClientConfig.createDefaultConfigBuilder().build();
-            this.dockerClient = DockerClientBuilder.getInstance(config).build();
-            System.out.println("[DockerSandboxService] Connected to Docker successfully.");
+            DockerHttpClient httpClient = new ApacheDockerHttpClient.Builder()
+                    .dockerHost(config.getDockerHost())
+                    .sslConfig(config.getSSLConfig())
+                    .maxConnections(50)
+                    .connectionTimeout(Duration.ofSeconds(5))
+                    .responseTimeout(Duration.ofSeconds(10))
+                    .build();
+            this.dockerClient = DockerClientImpl.getInstance(config, httpClient);
+            System.out.println("[DockerSandboxService] Connected to Docker successfully using Apache HttpClient5.");
         } catch (Exception e) {
             System.err.println("[DockerSandboxService] Warning: Docker host not available. Falling back to local simulation: " + e.getMessage());
             this.dockerClient = null;

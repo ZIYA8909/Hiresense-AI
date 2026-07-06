@@ -139,7 +139,7 @@ export default function CandidateDashboard() {
 
     // Connect to WebSocket gateway / STOMP broker
     try {
-      const socket = new SockJS('http://localhost:8085/ws-notifications');
+      const socket = new SockJS('http://localhost:8080/ws-notifications');
       const stompClient = new Client({
         webSocketFactory: () => socket,
         reconnectDelay: 5000,
